@@ -32,20 +32,13 @@ def print_res(res, lst, msg):
     print("Result for {}".format(msg))
     try:
         for i in res[lst[0]]:
-            if len(lst) > 2:
-                if len(lst) == 3:
-                    print(i[lst[1]][lst[2]])
-                elif len(lst) == 4:
-                    print(i[lst[1]][lst[2]][lst[3]])
-                elif len(lst) == 5:
-                    print(i[lst[1]][lst[2]][lst[3]][lst[4]])
-                elif len(lst) == 6:
-                    print(i[lst[1]][lst[2]][lst[3]][lst[4]][lst[5]])
-            else:
-                if len(lst) == 2:
-                    print(i[lst[1]])
+            out = ''
+            for j in range(len(lst)):
+                if j == 0:
+                    out += 'i'
                 else:
-                    print(i)
+                    out += '[lst[{}]]'.format(j)
+            print(eval(out))
     except TypeError:
         print(res[lst[0]])
     return None
