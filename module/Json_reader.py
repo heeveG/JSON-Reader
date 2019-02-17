@@ -86,7 +86,23 @@ def analyze_json(js):
                     break
 
 
-# with open("user_friends.json") as f:
-#     data = json.load(f)
-
-analyze_json(get_json())
+if __name__ == "__main__":
+    ask = input("Welcome to JSON Reader!\n If you want to explore Twitter JSON file enter '1'\n If you want to \
+explore provided JSON file enter '2'\n If you want to explore you own JSON file copy \
+it inside module folder and enter '3'\n")
+    while ask not in ['1', '2', '3']:
+        ask = input("Your answer is invalid. Please reenter\n")
+    if ask == '1':
+        analyze_json(get_json())
+    elif ask == '2':
+        with open("user_friends.json") as f:
+            data = json.load(f)
+        analyze_json(data)
+    elif ask == '3':
+        name = input("Please enter your file name without '.json'\n")
+        try:
+            with open("{}.json".format(name)) as f:
+                data = json.load(f)
+            analyze_json(data)
+        except FileNotFoundError:
+            print('You entered invalid file name. Try again.')
