@@ -16,6 +16,10 @@ ctx.verify_mode = ssl.CERT_NONE
 
 
 def get_json():
+    """
+    None -> dict
+    Returns json dict, got using Twitter API, containing entered user friends' info
+    """
     acct = input('Enter Twitter Account:')
     if len(acct) < 1:
         return None
@@ -28,6 +32,10 @@ def get_json():
 
 
 def print_res(res, lst, msg):
+    """
+    (dict, list, str) -> None
+    Prints out info from dict based on input
+    """
     lst.pop(0)
     print("Result for {}".format(msg))
     try:
@@ -45,6 +53,10 @@ def print_res(res, lst, msg):
 
 
 def analyze_json(js):
+    """
+    dict -> None
+    Gets input from user and calls print_res with it
+    """
     res = copy.deepcopy(js)
     lst = [" "]
     msg = "/"
@@ -77,6 +89,7 @@ def analyze_json(js):
                     print('\nYou cannot go any deeper \n')
                     print_res(res, lst, msg)
                     break
+    return None
 
 
 if __name__ == "__main__":
