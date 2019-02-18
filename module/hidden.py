@@ -4,7 +4,7 @@
 # Create new App and get the four strings
 
 def oauth():
-    return {"consumer_key": "FBsjBTCos8aE898fQ0Z9lgocu",
-            "consumer_secret": "4QNSrFZTSOk8RgOx1ulXNCF65e45suGJmtrNv1ApqqglIABcxG",
-            "token_key": "764014703123181570-SW9wrZlpyhUaBrvYCmO9F0hz36rSXF7",
-            "token_secret": "u9fzYAVexPQE1egrchmNZasVwlaEYmDKEloShdhVgwEfU"}
+    return {"consumer_key": "zWjS7KLP1BwfpL2oReMyt2Nkp",
+            "consumer_secret": "zf0ygsC2LT6bplDMGgW9uHApQ2AEzRPG0paSpVeLq2bSu3oWSn",
+            "token_key": "764014703123181570-PriultFwxc8oTo4yjrgnv6glb5EEjhX",
+            "token_secret": "kClf7uUh5ekcfiEZPwznJFGs6s4D9P7hS5JU1a2nsD7Nl"}
